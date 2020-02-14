@@ -1,0 +1,44 @@
+# Site settings
+title: FabLab Sulmona
+description: 'Community Makers'
+url: 'https://www.fablabsulmona.org'
+baseurl: ''
+
+author:
+  name: 'Francesco La Vella'
+  email: francescolv@gmail.com
+  twitter_username: francescolv
+  facebook_username: francescolv
+  github_username:  francescolv
+  linkedin_username:  francescolv
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: 
+  - jekyll-paginate
+  - jekyll-sitemap
+
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
